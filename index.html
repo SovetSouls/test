@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплексное решение 1C для ритейла</title>
+</head>
+<body>
+<div class="container">
+    <div class="comprehensive">
+        <div class="comprehensive-logo">
+            <img src="img/logo.png" alt="Логотип 1C">
+            <a href="#">
+                <img src="img/telephone_b.png" alt="Телефон">
+            </a>
+        </div>
+        <div class="comprehensive-title">
+            <h1>Комплексное решение 1C для ритейла</h1>
+        </div>
+        <div class="comprehensive-detail">
+            <div class="comprehensive-list">
+                <ul>
+                    <li>онлайн-кассы;</li>
+                    <li>торговое оборудование;</li>
+                    <li>автоматизация «под ключ».</li>
+                </ul>
+                <button id="callbackBtn">
+                    <img src="img/telephone_w.png" alt="Оставить отзыв">
+                    Оставить отзыв
+                </button>
+            </div>
+            <div class="comprehensive-image">
+                <img src="img/cashier.png" alt="кассир">
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="commercial-equipment">
+            <h2>Торговое оборудование</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/product1.png" alt="Онлайн-касса Касса №1">
+                    </div>
+                    <div class="product-item-detail">
+                        <h3>Онлайн-касса Касса №1</h3>
+                        <div class="product-item-price">
+                            <p>от 11 500 ₽</p>
+                            <button>Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/product2.png" alt="Онлайн-касса Атол 11-Ф Мобильный">
+                    </div>
+                    <div class="product-item-detail">
+                        <h3>Онлайн-касса Атол 11-Ф Мобильный</h3>
+                        <div class="product-item-price">
+                            <p>от 9 900 ₽</p>
+                            <button>Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/product3.png" alt="Онлайн-касса Атол 91-Ф">
+                    </div>
+                    <div class="product-item-detail">
+                        <h3>Онлайн-касса Атол 91-Ф</h3>
+                        <div class="product-item-price">
+                            <p>от 9 600 ₽</p>
+                            <button>Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/product4.png" alt="Онлайн-касса Атол 92-Ф">
+                    </div>
+                    <div class="product-item-detail">
+                        <h3>Онлайн-касса Атол 92-Ф</h3>
+                        <div class="product-item-price">
+                            <p>от 9 600 ₽</p>
+                            <button>Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal" id="modalWindow">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Заказать обратный звонок</h2>
+            <form id="callbackForm">
+                <label for="name">Имя*:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Телефон*:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email*:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<style>
+    body {
+        font-family: Roboto, serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    header {
+        width: 100%;
+        background-color: #FFE872;
+    }
+
+    .comprehensive {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFE872;
+    }
+
+    .comprehensive-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .comprehensive-logo a {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .comprehensive-title {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0 2rem;
+    }
+
+    .comprehensive-detail{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+    .comprehensive-list {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+        grid-row-gap: 4rem;
+        padding: 2rem;
+    }
+
+    .comprehensive-image {
+        display: flex;
+        align-items: end;
+    }
+
+    .comprehensive-image img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .comprehensive-detail ul {
+        list-style: circle;
+    }
+
+    .comprehensive-list button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        background-color: #1E1E23;
+        font-size: 14px;
+        text-transform: uppercase;
+        gap: 10px;
+        height: 48px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 5rem;
+    }
+
+    .commercial-equipment {
+        width: 100%;
+    }
+
+    .commercial-equipment h2 {
+        text-align: center;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 2rem;
+    }
+
+    .product-item {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #D8D8E7;
+        border-radius: 5px;
+    }
+
+    .product-image {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #D8D8E7;
+        justify-content: center;
+    }
+
+    .product-image img {
+        width: 183px;
+        height: 183px;
+        padding: 1rem;
+    }
+
+    .product-item-detail {
+        padding: 1rem;
+    }
+
+    .product-item-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .product-item-price p {
+        color: #498EF5;
+        background: #ECF4FF;
+        padding: 0.5rem 0.5rem;
+        border-radius: 5px;
+    }
+
+    .product-item-price button {
+        background: transparent;
+        color: #498EF5;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid #498EF5;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+        background-color: white;
+        margin: 2rem;
+        padding: 2rem;
+        border: 1px solid #888;
+    }
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input {
+        padding: 5px;
+    }
+    @media (max-width: 414px) {
+        .comprehensive-image {
+            display: none;
+        }
+        main {
+            padding: 2rem 2rem;
+        }
+    }
+</style>
+<script>
+    const callbackBtn = document.getElementById('callbackBtn');
+    const modalWindow = document.getElementById('modalWindow');
+    const closeButton = document.querySelector('.close-button');
+    const callbackForm = document.getElementById('callbackForm');
+
+    callbackBtn.addEventListener('click', () => {
+        modalWindow.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+        modalWindow.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == modalWindow) {
+            modalWindow.style.display = 'none';
+        }
+    });
+
+    callbackForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+
+        if (!nameInput.value || !phoneInput.value || !emailInput.value) {
+            alert('Пожалуйста, заполните все обязательные поля.');
+            return;
+        }
+
+        if (!isValidPhone(phoneInput.value)) {
+            alert('Пожалуйста, введите действительный номер телефона.');
+            return;
+        }
+
+        if (!isValidEmail(emailInput.value)) {
+            alert('Пожалуйста, введите действительный адрес электронной почты.');
+            return;
+        }
+
+        console.log('Форма успешно отправлена!');
+        alert('Форма успешно отправлена!');
+        modalWindow.style.display = 'none';
+        callbackForm.reset();
+    });
+
+    function isValidPhone(phone) {
+        const phoneRegex = /^\+?\d{1,3}[- ]?\(?\d{1,3}\)?[- ]?\d{3,4}[- ]?\d{4}$/;
+        return phoneRegex.test(phone);
+    }
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+</script>
+</html>
